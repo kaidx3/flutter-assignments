@@ -34,34 +34,28 @@ class MyApp extends StatelessWidget {
             //TODO: Put your code here to complete this app.
             Column(
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Container(
-                      height: 100,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        border: Border.all(
-                          width: 3,
-                          color: Colors.black,
-                        ),
+                Container(
+                    height: 100,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.amber,
+                      border: Border.all(
+                        width: 3,
+                        color: Colors.black,
                       ),
-                      child: const Center(
-                        child: Text('Container 1'),
-                      )),
-                ),
+                    ),
+                    child: const Center(
+                      child: Text('Container 1'),
+                    )),
                 Transform.rotate(
                   angle: pi / 4,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Container(
-                      height: 100,
-                      width: 100,
-                      alignment: Alignment.center,
-                      color: Colors.white,
-                      child: const Center(
-                        child: Text('Container 2'),
-                      ),
+                  child: Container(
+                    height: 100,
+                    width: 100,
+                    alignment: Alignment.center,
+                    color: Colors.white,
+                    child: const Center(
+                      child: Text('Container 2'),
                     ),
                   ),
                 )
@@ -73,42 +67,30 @@ class MyApp extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: <Widget>[
-                        Expanded(
-                          child: Container(
-                            width: 100,
-                            decoration: const BoxDecoration(
-                              color: Colors.yellow,
-                            ),
-                            child: const Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text('Container 3'),
-                            ),
-                          ),
-                        )
-                      ],
+                    child: Container(
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        color: Colors.yellow,
+                      ),
+                      child: const Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Text('Container 3'),
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: <Widget>[
-                        Expanded(
-                          child: Container(
-                            width: 100,
-                            decoration: const BoxDecoration(
-                              color: Colors.blue,
-                            ),
-                            child: const Align(
-                              alignment: Alignment.centerRight,
-                              child: Text('Container 4'),
-                            ),
-                          ),
-                        )
-                      ],
+                    child: Container(
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        color: Colors.blue,
+                      ),
+                      child: const Align(
+                        alignment: Alignment.centerRight,
+                        child: Text('Container 4'),
+                      ),
                     ),
                   ),
                 ),
