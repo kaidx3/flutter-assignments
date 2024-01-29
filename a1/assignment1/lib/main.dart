@@ -32,139 +32,122 @@ class MyApp extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
             //TODO: Put your code here to complete this app.
-            Expanded(
-              child: Column(
-                children: <Widget>[
-                  Padding(
+            Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.amber,
+                        border: Border.all(
+                          width: 3,
+                          color: Colors.black,
+                        ),
+                      ),
+                      child: const Center(
+                        child: Text('Container 1'),
+                      )),
+                ),
+                Transform.rotate(
+                  angle: pi / 4,
+                  child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Container(
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(
-                          color: Colors.amber,
-                          border: Border.all(
-                            width: 3,
-                            color: Colors.black,
-                          ),
-                        ),
-                        child: const Center(
-                          child: Text('Container 1'),
-                        )),
-                  ),
-                  Transform.rotate(
-                    angle: pi / 4,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Container(
-                        height: 100,
-                        width: 100,
-                        alignment: Alignment.center,
-                        color: Colors.white,
-                        child: const Center(
-                          child: Text('Container 2'),
-                        ),
+                      height: 100,
+                      width: 100,
+                      alignment: Alignment.center,
+                      color: Colors.white,
+                      child: const Center(
+                        child: Text('Container 2'),
                       ),
                     ),
-                  )
-                ],
-              ),
+                  ),
+                )
+              ],
             ),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Column(
-                        children: <Widget>[
-                          Expanded(
-                            child: Container(
-                              width: 100,
-                              decoration: const BoxDecoration(
-                                color: Colors.yellow,
-                              ),
-                              child: const Align(
-                                alignment: Alignment.bottomCenter,
-                                child: Text('Container 3'),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Column(
-                        children: <Widget>[
-                          Expanded(
-                            child: Container(
-                              width: 100,
-                              decoration: const BoxDecoration(
-                                color: Colors.blue,
-                              ),
-                              child: const Align(
-                                alignment: Alignment.centerRight,
-                                child: Text('Container 4'),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                        Container(),
-                        Container(
-                            height: 100,
-                            width: 100,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.black,
-                              border: Border.all(
-                                width: 3,
-                                color: Colors.white,
-                              ),
-                            ),
-                            child: const Center(
-                              child: Text(
-                                'Container 5',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            )),
-                      ])),
-                  Expanded(
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
                     child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Container(
-                              color: Colors.red,
-                              width: 100,
-                              height: 100,
-                              child: const Text(
-                                "Con 6",
-                                style: TextStyle(fontSize: 30),
-                              )),
-                          Container(
-                            color: Colors.red,
-                            height: 100,
+                      children: <Widget>[
+                        Expanded(
+                          child: Container(
                             width: 100,
-                          )
-                        ]),
-                  )
-                ],
-              ),
+                            decoration: const BoxDecoration(
+                              color: Colors.yellow,
+                            ),
+                            child: const Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Text('Container 3'),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: Container(
+                            width: 100,
+                            decoration: const BoxDecoration(
+                              color: Colors.blue,
+                            ),
+                            child: const Align(
+                              alignment: Alignment.centerRight,
+                              child: Text('Container 4'),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.black,
+                        border: Border.all(
+                          width: 3,
+                          color: Colors.white,
+                        ),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'Container 5',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      )),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                      color: Colors.red,
+                      width: 100,
+                      height: 100,
+                      child: const Text(
+                        "Con 6",
+                        style: TextStyle(fontSize: 30),
+                      )),
+                )
+              ],
             ),
           ],
         ),
