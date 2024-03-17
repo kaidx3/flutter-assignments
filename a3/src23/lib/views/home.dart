@@ -151,7 +151,7 @@ class HomeViewState extends State<HomeView> {
                       await databaseService.getOrCreateDatabaseHandle();
                       await databaseService.insertStock(stock);
                       stockList = await databaseService.getAllStocksFromDb();
-                      print(stockList);
+                      await databaseService.printAllStocksInDbToConsole();
                       setState(() {});
                     } catch (e) {
                       print('HomeView inputStock catch: $e');

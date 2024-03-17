@@ -16,7 +16,7 @@ class SQFliteDbService {
         path,
         onCreate: (sqflitePackage.Database db1, int version) async {
           await db1.execute(
-            "CREATE TABLE stocks(id INTEGER PRIMARY KEY, symbol TEXT, companyName TEXT, price REAL)",
+            "CREATE TABLE stocks(symbol TEXT PRIMARY KEY, companyName TEXT, price REAL)",
           );
         },
         version: 1,
@@ -65,7 +65,7 @@ class SQFliteDbService {
       //Also specify the conflictAlgorithm.
       //In this case, if the same stock is inserted
       //multiple times, it replaces the previous data.
-      await db!.insert(
+      await db.insert(
         'stocks',
         stock,
         conflictAlgorithm: sqflitePackage.ConflictAlgorithm.replace,
@@ -79,7 +79,7 @@ class SQFliteDbService {
     try {
       //TODO:
       //Put code here to update stock info.
-      await db!.update(
+      await db.update(
         'stocks',
         stock,
         where: "id = ?",
@@ -94,7 +94,7 @@ class SQFliteDbService {
     try {
       //TODO:
       //Put code here to delete a stock from the database.
-      await db!.delete(
+      await db.delete(
         'stocks',
         where: "id = ?",
         whereArgs: [stock['id']],
